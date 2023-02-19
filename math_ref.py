@@ -27,3 +27,6 @@ math.lcm(x, y)
 # xのy乗を出力(mを指定することでmod mの形で出力)
 # O(log(y))
 math.pow(x, y, m)
+
+# x個の中からy個を選ぶ組み合わせの数を出力
+math.comb(x, y)
