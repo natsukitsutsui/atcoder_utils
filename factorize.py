@@ -26,8 +26,3 @@ def prime_factorize(n):
         fac.append(n)
     fac = collections.Counter(fac)
     return fac
-
-c = prime_factorize(840)
-print(c)
-print(c.values())
-print(c.keys())
