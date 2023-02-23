@@ -25,11 +25,8 @@ heapqとdictを合わせたデータ構造
     x = hd.get_min()
 
 """
-
 import heapq
-from collections import defaultdict
 from sys import exit
-
 class HeapDict:
     def __init__(self):
         self.h=[]
@@ -38,18 +35,20 @@ class HeapDict:
 
     def insert(self,x):
         heapq.heappush(self.h,x)
-        self.d[x]+=1
+        if x not in self.d:
+            self.d[x]=1
+        else:
+            self.d[x]+=1
         self.size+=1
 
-    # heapqで要素の削除は出来ないので，削除を遅延させる
     def erase(self,x):
-        if self.d[x]==0:
+        if x not in self.d or self.d[x]==0:
             print(x,"is not in HeapDict")
             exit()
         else:
             self.d[x]-=1
             self.size-=1
- 
+
         while len(self.h)!=0:
             if self.d[self.h[0]]==0:
                 heapq.heappop(self.h)
@@ -57,16 +56,10 @@ class HeapDict:
                 break
 
     def is_exist(self,x):
-        if self.d[x]!=0:
+        if x in self.d and self.d[x]!=0:
             return True
         else:
             return False
 
     def get_min(self):
-        if self.size==0:
-            return False
-        
-        while not self.is_exist(self.h[0]):
-            self.erase(self.h[0])
         return self.h[0]
-
