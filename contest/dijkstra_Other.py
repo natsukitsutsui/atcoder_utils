@@ -1,7 +1,7 @@
 """
 典型アルゴリズム D
-ダイクストラ法
 https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_d
+ダイクストラ法
 """
 
 def LI(): return list(map(int, input().split()))
