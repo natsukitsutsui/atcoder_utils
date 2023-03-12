@@ -6,7 +6,9 @@ sys.setrecursionlimit(10**8)
 mod1 = 998244353
 mod2 = 10**9+7
 INF = 10**100
-def LMI(): return list(map(int, input().split()))
-def II(): return int(input())
-def LI(): return list(input())
-def IN(): return input()
+def lmi(): return list(map(int, input().split()))
+def ii(): return int(input())
+def li(): return list(input())
+def in_(): return input()
+def is_(): return input.split()
+
