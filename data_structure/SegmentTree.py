@@ -42,7 +42,7 @@ class SegmentTree:
             i >>= 1
             self._node[i] = self._combine_f(
                 self._node[i << 1 | 0],     # 左の子
-                self._node[i << 1 | 0],     # 右の子
+                self._node[i << 1 | 1],     # 右の子
             )
 
     # [区間取得] 位置 [l, r) (0-indexed) 内の要素について、
