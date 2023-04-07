@@ -37,6 +37,7 @@ for l in range(N):
     if r - l > 0:
         prod //= S[l]
     else:
+        # whileの条件を満たさないとrが置き去りにされるので追加
         r += 1
 
 print(ans)
