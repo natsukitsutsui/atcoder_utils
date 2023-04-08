@@ -2,7 +2,7 @@
 Lazy Segment Tree
 """
 
-class SegmentTree:
+class LazySegmentTree:
     def __init__(
         self,
         n,                      # 列の長さ
