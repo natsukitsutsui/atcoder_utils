@@ -15,5 +15,5 @@ class Matrix:
                   for j in range(self.n)] for i in range(self.n)]
     
     def __mul__(self, other):
-        return [[sum([self.A[i][k]*other.A[k][j] for k in range(self.n)])\
+        return [[sum([self.A[i][k] * other.A[k][j] for k in range(self.n)])\
                   for j in range(self.n)] for i in range(self.n)]
