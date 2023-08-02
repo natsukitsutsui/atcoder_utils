@@ -12,7 +12,7 @@ def LI(): return list(input())
 def IN(): return input()
 def IS(): return input().split()
 def LMI(): return list(map(int, IS()))
-def ZIN(n): return zip(*[LMI() for _ in range(n)])
+def Vertical_IN(n): return zip(*[LMI() for _ in range(n)])
 def Build_Graph(n, m):
     G = [[] for _ in range(n)]
     for _ in range(m):
@@ -21,3 +21,7 @@ def Build_Graph(n, m):
         G[a].append(b)
         G[b].append(a)
     return G
+def array_copy(A, n, m=0, l=0):
+    if m == 0: return [A[i] for i in range(n)]
+    elif l == 0: return [A[i][:] for i in range(n)]
+    else: return [[A[i][j][:] for j in range(m)] for i in range(n)]
