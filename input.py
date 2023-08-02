@@ -21,7 +21,6 @@ def Build_Graph(n, m):
         G[a].append(b)
         G[b].append(a)
     return G
-def array_copy(A, n, m=0, l=0):
-    if m == 0: return [A[i] for i in range(n)]
-    elif l == 0: return [A[i][:] for i in range(n)]
-    else: return [[A[i][j][:] for j in range(m)] for i in range(n)]
+def copy(A, n):
+    if n == 0: return A[:]
+    else: return [A[i][:] for i in range(n)]
